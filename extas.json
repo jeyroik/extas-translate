@@ -1,0 +1,50 @@
+{
+  "name": "extas/translate",
+  "container_classes": [
+    {
+      "interface": "extas\\interfaces\\translates\\ITranslateRepository",
+      "class": "extas\\components\\translates\\TranslateRepository"
+    },
+    {
+      "interface": "extas\\interfaces\\translates\\vocabularies\\IVocabularyRepository",
+      "class": "extas\\components\\translates\\vocabularies\\VocabularyRepository"
+    }
+  ],
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\PluginInstallTranslates",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\translates\\TranslatePluginRuDefault",
+      "stage": "extas.translate.to.ru"
+    },
+    {
+      "class": "extas\\components\\plugins\\translates\\TranslatePluginVocabularyExtended",
+      "stage": "extas.translate.vocabulary"
+    }
+  ],
+  "translates": [
+    {
+      "lang_source": "en",
+      "lang_translated": "ru",
+      "source": "Unknown",
+      "translated": "Неизвестная ошибка",
+      "type": "danger"
+    },
+    {
+      "lang_source": "en",
+      "lang_translated": "ru",
+      "source": "Missed redirect path",
+      "translated": "Отсутствует адрес для перенаправления",
+      "type": "danger"
+    },
+    {
+      "lang_source": "en",
+      "lang_translated": "ru",
+      "source": "Service access sharing canceled",
+      "translated": "Доступ к сервису отменён",
+      "type": "success"
+    }
+  ]
+}
