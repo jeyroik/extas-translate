@@ -54,7 +54,7 @@ class TranslateCoder extends Item implements ITranslateCoder
          * @var $translate ITranslate
          */
         $translateRepo = SystemContainer::getItem(ITranslateRepository::class);
-        $translate = $translateRepo->find([ITranslate::FIELD__ID => $translateId])->one();
+        $translate = $translateRepo->one([ITranslate::FIELD__ID => $translateId]);
 
         if ($translate) {
             $translated = '';
@@ -120,7 +120,7 @@ class TranslateCoder extends Item implements ITranslateCoder
          * @var $translate ITranslate
          */
         $translateRepo = SystemContainer::getItem(ITranslateRepository::class);
-        $translate = $translateRepo->find([ITranslate::FIELD__ID => $translateId])->one();
+        $translate = $translateRepo->one([ITranslate::FIELD__ID => $translateId]);
 
         if (!$translate) {
             $translate = new Translate([
