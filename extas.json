@@ -1,6 +1,6 @@
 {
   "name": "extas/translate",
-  "container_classes": [
+  "package_classes": [
     {
       "interface": "extas\\interfaces\\translates\\ITranslateRepository",
       "class": "extas\\components\\translates\\TranslateRepository"
