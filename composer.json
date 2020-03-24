@@ -2,8 +2,7 @@
   "name": "jeyroik/extas-translate",
   "description": "Extas translate package",
   "require": {
-    "jeyroik/extas-foundation": "*",
-    "jeyroik/extas-installer": "*"
+    "jeyroik/extas-installer": "1.*"
   },
   "autoload": {
     "psr-4": {
